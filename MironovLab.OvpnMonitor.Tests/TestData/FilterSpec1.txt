@@ -1,0 +1,7 @@
+ [CLIENTS ACCEPT]
+ -accounting
+ -enigma
+ [SUBNETS DROP]
+ -10.46.79.9
+ +10.0.0.0/8
+ [END]

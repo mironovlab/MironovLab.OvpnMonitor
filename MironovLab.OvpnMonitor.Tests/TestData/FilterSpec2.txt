@@ -1,0 +1,7 @@
+ [CLIENTS DENY]
+ +public
+ [SUBNETS ACCEPT]
+ +10.10.0.1
+ -10.0.0.0/8
+ -unknown
+ [END]

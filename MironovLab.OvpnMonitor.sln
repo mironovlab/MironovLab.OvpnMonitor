@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.7.11919.86 stable
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MironovLab.OvpnMonitor.Service", "MironovLab.OvpnMonitor.Service\MironovLab.OvpnMonitor.Service.csproj", "{511B984F-C0C7-4235-B700-DD87E95EE4C9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MironovLab.OpenVPN.Management", "MironovLab.OvpnMonitor.Management\MironovLab.OpenVPN.Management.csproj", "{E8486740-74B1-4D80-9480-41C3EAC746CE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MironovLab.OvpnMonitor.Tests", "MironovLab.OvpnMonitor.Tests\MironovLab.OvpnMonitor.Tests.csproj", "{1C93D859-BF73-4A63-B119-3D1D491DA092}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{39E566A8-8CA2-48FE-89A4-697F50AD5816}"
+	ProjectSection(SolutionItems) = preProject
+		openvpn.sql = openvpn.sql
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{511B984F-C0C7-4235-B700-DD87E95EE4C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{511B984F-C0C7-4235-B700-DD87E95EE4C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{511B984F-C0C7-4235-B700-DD87E95EE4C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{511B984F-C0C7-4235-B700-DD87E95EE4C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8486740-74B1-4D80-9480-41C3EAC746CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8486740-74B1-4D80-9480-41C3EAC746CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8486740-74B1-4D80-9480-41C3EAC746CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8486740-74B1-4D80-9480-41C3EAC746CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C93D859-BF73-4A63-B119-3D1D491DA092}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C93D859-BF73-4A63-B119-3D1D491DA092}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C93D859-BF73-4A63-B119-3D1D491DA092}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C93D859-BF73-4A63-B119-3D1D491DA092}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E104967A-D24A-4D3F-A5E5-EA91DDAE4200}
+	EndGlobalSection
+EndGlobal

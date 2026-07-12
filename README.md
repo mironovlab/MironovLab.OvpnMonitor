@@ -42,7 +42,7 @@ processing real-time OpenVPN messages.
 ## Database setup
 
 The repository includes
-[`openvpn.sql`](MironovLab.OvpnMonitor.Service/DbConnection/openvpn.sql), which
+[`openvpn.sql`](openvpn.sql), which
 can be used to reproduce the required database structure quickly. The script
 creates:
 
@@ -55,7 +55,7 @@ creates:
 Import the complete database schema from the repository root with:
 
 ```bash
-mysql -u root -p < MironovLab.OvpnMonitor.Service/DbConnection/openvpn.sql
+mysql -u root -p < openvpn.sql
 ```
 
 The script creates the `openvpn` database with `utf8mb4` encoding and selects it

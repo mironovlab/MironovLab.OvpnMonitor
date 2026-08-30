@@ -168,7 +168,7 @@ namespace MironovLab.OvpnMonitor.Service
                     _logger.LogError(ex, "Error when (re-)connecting to OpenVPN Management Interface");
                 }
 
-                await Task.Delay(TimeSpan.FromMinutes(5), _stoppingToken);
+                await Task.Delay(TimeSpan.FromSeconds(30), _stoppingToken);
             }
         }
 

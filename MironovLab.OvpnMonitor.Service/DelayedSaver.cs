@@ -69,8 +69,15 @@ namespace MironovLab.OvpnMonitor.Service
                 {
                     foreach (var session in sessions)
                     {
-                        ctx.Sessions.Attach(session);
-                        ctx.Entry(session).State = EntityState.Modified;
+                        if (session.Id == 0)
+                        {
+                            Requeue(session);
+                        }
+                        else
+                        {
+                            ctx.Sessions.Attach(session);
+                            ctx.Entry(session).State = EntityState.Modified;
+                        }
                     }
 
                     ctx.SaveChangesAsync();
@@ -79,12 +86,25 @@ namespace MironovLab.OvpnMonitor.Service
             catch (Exception ex)
             {
                 _logger.LogError(ex, nameof(OnTimer));
-                lock (_timer)
+                foreach (var session in sessions)
                 {
-                    foreach (var session in sessions)
-                    {
-                        _sessions[session.SessionId] = session;
-                    }
+                    Requeue(session);
+                }
+            }
+        }
+
+        private void Requeue(Session session)
+        {
+            lock (_timer)
+            {
+                _sessions.TryAdd(session.SessionId, session);
+
+                if (!_timerActive)
+                {
+                    if (_timer.Change(Delay, Timeout.InfiniteTimeSpan))
+                        _timerActive = true;
+                    else
+                        _logger.LogError("Could not schedule the timer");
                 }
             }
         }

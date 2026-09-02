@@ -173,7 +173,7 @@ namespace MironovLab.OpenVPN.Management.Core
 
             while (true)
             {
-                var enclosed = source[startIndex] == enclosureStart;
+                var enclosed = startIndex < source.Length && source[startIndex] == enclosureStart;
                 var splitterSearchIndex = enclosed
                     ? source.IndexOf(enclosureEnd, startIndex + 1)
                     : startIndex;

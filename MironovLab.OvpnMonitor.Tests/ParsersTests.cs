@@ -151,5 +151,22 @@ namespace MironovLab.OvpnMonitor.Tests
             Assert.That(notify.NotifyTypeText, Is.EqualTo(typeText));
             Assert.That(notify.Text, Is.EqualTo(text));
         }
+
+        [Test]
+        public void SequentialSplitTest()
+        {
+            var input = "1788211686,CONNECTING,,,,,,";
+            var data = new string[8];
+            var count = ParseUtils.SequentialSplit(input, ',', data);
+            Assert.That(count, Is.EqualTo(8));
+            Assert.That(data[0], Is.EqualTo("1788211686"));
+            Assert.That(data[1], Is.EqualTo("CONNECTING"));
+            Assert.That(data[2], Is.EqualTo(""));
+            Assert.That(data[3], Is.EqualTo(""));
+            Assert.That(data[4], Is.EqualTo(""));
+            Assert.That(data[5], Is.EqualTo(""));
+            Assert.That(data[6], Is.EqualTo(""));
+            Assert.That(data[7], Is.EqualTo(""));
+        }
     }
 }

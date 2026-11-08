@@ -80,7 +80,7 @@ namespace MironovLab.OvpnMonitor.Service
                         }
                     }
 
-                    ctx.SaveChangesAsync();
+                    ctx.SaveChanges();
                 }
             }
             catch (Exception ex)
